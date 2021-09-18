@@ -1,13 +1,13 @@
 # Maintainer: Lukas Jirkovsky <l.jirkovsky@gmail.com>
 # Contributor: Allan McRae <allan@archlinux.org>
 pkgname=gdb-git
-pkgver=78972.bbad633
+pkgver=107474.acedf59370a
 pkgrel=1
 pkgdesc="The GNU Debugger"
 arch=('i686' 'x86_64')
 url="http://www.gnu.org/software/gdb/"
 license=('GPL3')
-depends=('expat' 'guile' 'ncurses' 'python2' 'xz')
+depends=('expat' 'guile' 'ncurses' 'python' 'xz')
 makedepends=('git')
 provides=('gdb')
 conflicts=('gdb')
@@ -36,7 +36,7 @@ build() {
   ./configure --prefix=/usr --disable-nls \
               --disable-werror \
               --with-system-readline \
-              --with-python=/usr/bin/python2 \
+              --with-python=/usr/bin/python \
               --with-system-gdbinit=/etc/gdb/gdbinit
 
   make
